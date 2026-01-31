@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MesaSegura - Dashboard Restaurante</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="14" width="28" height="3" rx="1.5" fill="url(#logo-gradient)" />
+                        <path d="M10 17L9 30M30 17L31 30M16 17V26M24 17V26" stroke="url(#logo-gradient)"
+                            stroke-width="2.5" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="6" y1="14" x2="34" y2="30">
+                                <stop offset="0%" stop-color="#FF6B35" />
+                                <stop offset="100%" stop-color="#ff8c42" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">MesaSegura</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active">
+                    <span class="icon">📊</span>
+                    <span>Vista General</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="icon">📅</span>
+                    <span>Reservas</span>
+                    <span class="badge">4</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="icon">👥</span>
+                    <span>Clientes</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="icon">💰</span>
+                    <span>Finanzas</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">JP</div>
+                    <div class="user-info">
+                        <span class="user-name">Juan Pérez</span>
+                        <span class="user-role">La Bella Vita</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title">Vista General</h1>
+                <div class="top-actions">
+                    <button class="btn btn-outline-light icon-only">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="btn btn-primary" onclick="createNewReservation()">
+                        + Nueva Reserva
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon icon-blue">📅</div>
+                    <div class="stat-details">
+                        <span class="stat-label">Reservas Hoy</span>
+                        <span class="stat-number">24</span>
+                        <span class="stat-trend positive">+12% vs ayer</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-purple">💶</div>
+                    <div class="stat-details">
+                        <span class="stat-label">Ingresos Asegurados</span>
+                        <span class="stat-number">€480</span>
+                        <span class="stat-trend positive">100% garantizado</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-green">✅</div>
+                    <div class="stat-details">
+                        <span class="stat-label">Tasa de Asistencia</span>
+                        <span class="stat-number">98.5%</span>
+                        <span class="stat-trend positive">+2.4% este mes</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-orange">⚠️</div>
+                    <div class="stat-details">
+                        <span class="stat-label">No-Shows Prevenidos</span>
+                        <span class="stat-number">3</span>
+                        <span class="stat-trend">Ahorro: €60</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity / Reservations -->
+            <div class="content-grid">
+                <div class="card recent-reservations">
+                    <div class="card-header">
+                        <h2>Próximas Reservas</h2>
+                        <a href="#" class="view-all">Ver todas</a>
+                    </div>
+                    <div class="reservation-list">
+                        <!-- Items will be populated by JS -->
+                        <div class="reservation-item">
+                            <div class="res-time">19:30</div>
+                            <div class="res-info">
+                                <div class="res-name">Familia García</div>
+                                <div class="res-meta">4 personas · Mesa 5</div>
+                            </div>
+                            <div class="res-status status-confirmed">Confirmado</div>
+                            <div class="res-commitment">€40 dep.</div>
+                            <div class="res-actions">
+                                <button class="action-btn check-in" title="Check-in">✅</button>
+                            </div>
+                        </div>
+                        <div class="reservation-item">
+                            <div class="res-time">20:00</div>
+                            <div class="res-info">
+                                <div class="res-name">Carlos Rodriguez</div>
+                                <div class="res-meta">2 personas · Mesa 2</div>
+                            </div>
+                            <div class="res-status status-confirmed">Confirmado</div>
+                            <div class="res-commitment">€20 dep.</div>
+                            <div class="res-actions">
+                                <button class="action-btn check-in" title="Check-in">✅</button>
+                            </div>
+                        </div>
+                        <div class="reservation-item">
+                            <div class="res-time">20:30</div>
+                            <div class="res-info">
+                                <div class="res-name">Marta & Amigos</div>
+                                <div class="res-meta">6 personas · Mesa 8</div>
+                            </div>
+                            <div class="res-status status-pending">Pendiente</div>
+                            <div class="res-commitment">Esperando pago</div>
+                            <div class="res-actions">
+                                <button class="action-btn" title="Recordar">🔔</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card quick-actions-card">
+                    <div class="card-header">
+                        <h2>Acciones Rápidas</h2>
+                    </div>
+                    <div class="quick-actions-grid">
+                        <button class="quick-action-btn">
+                            <span class="qa-icon">🚫</span>
+                            <span>Bloquear Mesa</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <span class="qa-icon">📢</span>
+                            <span>Crear Promo</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <span class="qa-icon">⚙️</span>
+                            <span>Ajustar Horario</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <span class="qa-icon">🎫</span>
+                            <span>Ver Tickets</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

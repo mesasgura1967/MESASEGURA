@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MesaSegura - Mis Reservas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-600);
+        }
+
+        .profile-info h2 {
+            color: white;
+            margin: 0;
+            font-family: var(--font-display);
+        }
+
+        .profile-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0.25rem 0 0;
+        }
+
+        .upcoming-reservation-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .upcoming-reservation-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-500);
+            box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.2);
+        }
+
+        .reservation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .restaurant-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .reservation-date {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .reservation-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-icon {
+            font-size: 1.25rem;
+        }
+
+        .detail-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-label {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .detail-value {
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .reservation-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .qr-code-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .qr-code-btn:hover {
+            background: var(--primary-500);
+            color: white;
+            border-color: var(--primary-500);
+        }
+
+        .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .favorite-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .favorite-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .favorite-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .favorite-content {
+            padding: 1rem;
+        }
+
+        .favorite-name {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .favorite-type {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="14" width="28" height="3" rx="1.5" fill="url(#logo-gradient)" />
+                        <path d="M10 17L9 30M30 17L31 30M16 17V26M24 17V26" stroke="url(#logo-gradient)"
+                            stroke-width="2.5" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="6" y1="14" x2="34" y2="30">
+                                <stop offset="0%" stop-color="#FF6B35" />
+                                <stop offset="100%" stop-color="#ff8c42" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">MesaSegura</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" onclick="showSection('overview')">
+                    <span class="icon">🏠</span>
+                    <span>Inicio</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showSection('reservations')">
+                    <span class="icon">📅</span>
+                    <span>Mis Reservas</span>
+                    <span class="badge" id="reservations-count">2</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showSection('favorites')">
+                    <span class="icon">❤️</span>
+                    <span>Favoritos</span>
+                </a>
+                <a href="booking.html" class="sidebar-link">
+                    <span class="icon">🔍</span>
+                    <span>Buscar Restaurantes</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showSection('settings')">
+                    <span class="icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">AM</div>
+                    <div class="user-info">
+                        <span class="user-name">Ana Martínez</span>
+                        <span class="user-role">Cliente Premium</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title">Mi Panel</h1>
+                <div class="top-actions">
+                    <button class="btn btn-outline-light icon-only">
+                        🔔
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="btn btn-primary" onclick="window.location.href='booking.html'">
+                        + Nueva Reserva
+                    </button>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <div id="overview-section">
+                <div class="profile-header">
+                    <div class="profile-avatar">AM</div>
+                    <div class="profile-info">
+                        <h2>¡Hola, Ana! 👋</h2>
+                        <p>Tienes 2 reservas próximas</p>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon icon-blue">📅</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Reservas Totales</span>
+                            <span class="stat-number">24</span>
+                            <span class="stat-trend positive">Este año</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-green">✅</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Tasa de Asistencia</span>
+                            <span class="stat-number">100%</span>
+                            <span class="stat-trend positive">¡Perfecto!</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-purple">💰</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Fianzas Activas</span>
+                            <span class="stat-number" id="stats-active-deposit">€0</span>
+                            <span class="stat-trend" id="stats-refunded-text">€0 devueltos históricamente</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-orange">❤️</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Restaurantes Favoritos</span>
+                            <span class="stat-number">5</span>
+                            <span class="stat-trend">En tu lista</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Próximas Reservas -->
+                <h2 style="margin: 2rem 0 1rem; color: var(--text-primary);">Próximas Reservas</h2>
+                <div id="upcoming-reservations"></div>
+            </div>
+
+            <!-- Reservations Section (initially hidden) -->
+            <div id="reservations-section" style="display: none;">
+                <h2 style="margin: 1rem 0;">Todas mis Reservas</h2>
+                <div id="all-reservations"></div>
+            </div>
+
+            <!-- Favorites Section (initially hidden) -->
+            <div id="favorites-section" style="display: none;">
+                <h2 style="margin: 1rem 0;">Mis Restaurantes Favoritos</h2>
+                <div class="favorites-grid" id="favorites-grid"></div>
+            </div>
+
+            <!-- Settings Section (initially hidden) -->
+            <div id="settings-section" style="display: none;">
+                <h2 style="margin: 1rem 0;">Configuración</h2>
+                <div class="card" style="padding: 2rem;">
+                    <h3>Configuración de la cuenta</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Próximamente disponible...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="user-dashboard.js"></script>
+</body>
+
+</html>
