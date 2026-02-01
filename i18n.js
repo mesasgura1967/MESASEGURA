@@ -358,8 +358,18 @@ const TRANSLATIONS = {
     }
 };
 
-// Current language
-let currentLanguage = localStorage.getItem('language') || LANGUAGES.ES;
+// Function to detect browser language
+function detectLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const shortLang = browserLang.split('-')[0].toLowerCase();
+
+    // If browser is in Spanish, use ES. Otherwise default to EN (for foreign users).
+    if (shortLang === 'es') return LANGUAGES.ES;
+    return LANGUAGES.EN;
+}
+
+// Current language: Priority: 1. Previous selection (localStorage) 2. Browser detection
+let currentLanguage = localStorage.getItem('language') || detectLanguage();
 
 // Get translation
 function t(key, replacements = {}) {
