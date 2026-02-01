@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="dashboard.css">
+    <script src="i18n.js"></script>
+    <script src="auth.js"></script>
 </head>
 
 <body class="dashboard-body">
@@ -29,31 +31,31 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="logo-text">MesaSegura</span>
+                    <span class="logo-text" data-i18n="brand.name">MesaSegura</span>
                 </div>
             </div>
 
             <nav class="sidebar-nav">
                 <a href="#" class="sidebar-link active">
                     <span class="icon">📊</span>
-                    <span>Vista General</span>
+                    <span data-i18n="restaurant.dashboard.overview">Vista General</span>
                 </a>
                 <a href="#" class="sidebar-link">
                     <span class="icon">📅</span>
-                    <span>Reservas</span>
+                    <span data-i18n="restaurant.dashboard.reservations">Reservas</span>
                     <span class="badge">4</span>
                 </a>
                 <a href="#" class="sidebar-link">
                     <span class="icon">👥</span>
-                    <span>Clientes</span>
+                    <span data-i18n="restaurant.dashboard.clients">Clientes</span>
                 </a>
                 <a href="#" class="sidebar-link">
                     <span class="icon">💰</span>
-                    <span>Finanzas</span>
+                    <span data-i18n="restaurant.dashboard.finance">Finanzas</span>
                 </a>
                 <a href="#" class="sidebar-link">
                     <span class="icon">⚙️</span>
-                    <span>Configuración</span>
+                    <span data-i18n="restaurant.dashboard.configuration">Configuración</span>
                 </a>
             </nav>
 
@@ -71,13 +73,14 @@
         <!-- Main Content -->
         <main class="main-content">
             <header class="top-bar">
-                <h1 class="page-title">Vista General</h1>
+                <h1 class="page-title" data-i18n="restaurant.dashboard.title">Vista General</h1>
                 <div class="top-actions">
+                    <!-- Switcher injected here -->
                     <button class="btn btn-outline-light icon-only">
                         🔔
                         <span class="notification-dot"></span>
                     </button>
-                    <button class="btn btn-primary" onclick="createNewReservation()">
+                    <button class="btn btn-primary">
                         + Nueva Reserva
                     </button>
                 </div>

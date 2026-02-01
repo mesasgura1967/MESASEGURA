@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="dashboard.css">
+    <script src="i18n.js"></script>
+    <script src="auth.js"></script>
     <style>
         .profile-header {
             background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
@@ -199,31 +201,31 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="logo-text">MesaSegura</span>
+                    <span class="logo-text" data-i18n="brand.name">MesaSegura</span>
                 </div>
             </div>
 
             <nav class="sidebar-nav">
                 <a href="#" class="sidebar-link active" onclick="showSection('overview')">
                     <span class="icon">🏠</span>
-                    <span>Inicio</span>
+                    <span data-i18n="dashboard.home">Inicio</span>
                 </a>
                 <a href="#" class="sidebar-link" onclick="showSection('reservations')">
                     <span class="icon">📅</span>
-                    <span>Mis Reservas</span>
+                    <span data-i18n="dashboard.myReservations">Mis Reservas</span>
                     <span class="badge" id="reservations-count">2</span>
                 </a>
                 <a href="#" class="sidebar-link" onclick="showSection('favorites')">
                     <span class="icon">❤️</span>
-                    <span>Favoritos</span>
+                    <span data-i18n="dashboard.favorites">Favoritos</span>
                 </a>
                 <a href="booking.html" class="sidebar-link">
                     <span class="icon">🔍</span>
-                    <span>Buscar Restaurantes</span>
+                    <span data-i18n="nav.searchRestaurants">Buscar Restaurantes</span>
                 </a>
                 <a href="#" class="sidebar-link" onclick="showSection('settings')">
                     <span class="icon">⚙️</span>
-                    <span>Configuración</span>
+                    <span data-i18n="dashboard.settings">Configuración</span>
                 </a>
             </nav>
 
@@ -241,13 +243,15 @@
         <!-- Main Content -->
         <main class="main-content">
             <header class="top-bar">
-                <h1 class="page-title">Mi Panel</h1>
+                <h1 class="page-title" data-i18n="dashboard.title">Mi Panel</h1>
                 <div class="top-actions">
+                    <!-- Switcher injected here -->
                     <button class="btn btn-outline-light icon-only">
                         🔔
                         <span class="notification-dot"></span>
                     </button>
-                    <button class="btn btn-primary" onclick="window.location.href='booking.html'">
+                    <button class="btn btn-primary" onclick="window.location.href='booking.html'"
+                        data-i18n="dashboard.newReservation">
                         + Nueva Reserva
                     </button>
                 </div>

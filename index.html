@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js"></script>
     <script src="auth.js"></script>
 </head>
 
@@ -41,8 +42,9 @@
                 <a href="#contact" class="nav-link">Contacto</a>
             </div>
             <div class="nav-actions">
-                <button class="btn btn-secondary" onclick="showLogin()">Iniciar Sesión</button>
-                <button class="btn btn-primary" onclick="showSignup()">Registrarse</button>
+                <!-- Language switcher will be injected here by i18n.js -->
+                <button class="btn btn-secondary" onclick="showLogin()" data-i18n="nav.login">Iniciar Sesión</button>
+                <button class="btn btn-primary" onclick="showSignup()" data-i18n="nav.signup">Registrarse</button>
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>

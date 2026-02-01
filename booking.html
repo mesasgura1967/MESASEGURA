@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js"></script>
+    <script src="auth.js"></script>
     <style>
         /* Specific overrides for booking app feel */
         body {
@@ -209,12 +211,15 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="logo-text">MesaSegura</span>
+                    <span class="logo-text" data-i18n="brand.name">MesaSegura</span>
                 </div>
-                <div class="user-avatar"
-                    style="width: 32px; height: 32px; background: var(--bg-card); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); cursor: pointer;"
-                    onclick="window.location.href='dashboard.html'" title="Ir al Dashboard (Vista Restaurante)">
-                    �‍🍳
+                <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
+                    <!-- Language switcher injected here -->
+                    <div class="user-avatar"
+                        style="width: 32px; height: 32px; background: var(--bg-card); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); cursor: pointer;"
+                        onclick="window.location.href='dashboard.html'" title="Ir al Dashboard (Vista Restaurante)">
+                        👨‍🍳
+                    </div>
                 </div>
             </div>
 
@@ -224,22 +229,24 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input type="text" class="search-input" placeholder="Buscar restaurantes, cocinas o zonas...">
+                <input type="text" class="search-input" placeholder="Buscar restaurantes, cocinas o zonas..."
+                    data-i18n="booking.search.placeholder">
             </div>
 
             <div class="filter-tags">
-                <div class="filter-tag active">🔥 Popular</div>
-                <div class="filter-tag">🍣 Japonés</div>
-                <div class="filter-tag">🍝 Italiano</div>
-                <div class="filter-tag">🥩 Asador</div>
-                <div class="filter-tag">🌱 Vegano</div>
-                <div class="filter-tag">🍷 Vinoteca</div>
+                <div class="filter-tag active" data-i18n="booking.filter.popular">🔥 Popular</div>
+                <div class="filter-tag" data-i18n="booking.filter.japanese">🍣 Japonés</div>
+                <div class="filter-tag" data-i18n="booking.filter.italian">🍝 Italiano</div>
+                <div class="filter-tag" data-i18n="booking.filter.steakhouse">🥩 Asador</div>
+                <div class="filter-tag" data-i18n="booking.filter.vegan">🌱 Vegano</div>
+                <div class="filter-tag" data-i18n="booking.filter.winery">🍷 Vinoteca</div>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <h2 style="margin: 2rem 0 1rem; color: var(--text-primary); font-family: var(--font-display);">Restaurantes
+        <h2 style="margin: 2rem 0 1rem; color: var(--text-primary); font-family: var(--font-display);"
+            data-i18n="booking.title">Restaurantes
             Cercanos</h2>
 
         <div class="restaurants-grid" id="restaurants-grid">
