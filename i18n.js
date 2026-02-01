@@ -11,7 +11,7 @@ const TRANSLATIONS = {
         // Brand
         'brand.name': 'MesaSegura',
         'brand.tagline': 'Tu mesa, siempre asegurada',
-        'brand.subtitle': 'Plataforma de Reservas con Fianza Reembolsable',
+        'brand.subtitle': 'Plataforma de Reservas con Fianza Descontable de Factura',
 
         // Navigation
         'nav.features': 'Características',
@@ -58,8 +58,8 @@ const TRANSLATIONS = {
         'modal.booking.people': 'personas',
         'modal.booking.depositPerPerson': 'Depósito por persona',
         'modal.booking.totalCommitment': 'Total a comprometer',
-        'modal.booking.notice': 'No se te cobrará nada si asistes a tu reserva.',
-        'modal.booking.warning': 'El depósito se retiene solo en caso de no asistencia.',
+        'modal.booking.notice': 'La fianza se descontará automáticamente del total de tu factura al comer.',
+        'modal.booking.warning': 'Solo se retiene en caso de no asistencia sin previo aviso.',
         'modal.booking.cta': 'Proceder al Pago',
 
         // Payment Modal
@@ -72,7 +72,7 @@ const TRANSLATIONS = {
         'payment.cardHolder': 'Nombre del titular',
         'payment.cardHolderPlaceholder': 'Como aparece en la tarjeta',
         'payment.totalToPay': 'Total a pagar',
-        'payment.refundableDeposit': 'Depósito reembolsable',
+        'payment.refundableDeposit': 'Depósito descontable de factura',
         'payment.cta': 'Pagar',
         'payment.secure': 'Pago 100% seguro y encriptado',
 
@@ -101,7 +101,7 @@ const TRANSLATIONS = {
         'dashboard.stats.thisYear': 'Este año',
         'dashboard.stats.attendanceRate': 'Tasa de Asistencia',
         'dashboard.stats.perfect': '¡Perfecto!',
-        'dashboard.stats.depositsReturned': 'Depósitos Devueltos',
+        'dashboard.stats.depositsReturned': 'Fianzas Descontadas',
         'dashboard.stats.completedReservations': 'reservas completadas',
         'dashboard.stats.favoriteRestaurants': 'Restaurantes Favoritos',
         'dashboard.stats.inYourList': 'En tu lista',
@@ -186,7 +186,7 @@ const TRANSLATIONS = {
         // Brand
         'brand.name': 'MesaSegura',
         'brand.tagline': 'Your table, always secured',
-        'brand.subtitle': 'Restaurant Booking Platform with Financial Commitment',
+        'brand.subtitle': 'Restaurant Booking Platform with Bill-Deductible Deposit',
 
         // Navigation
         'nav.features': 'Features',
@@ -233,7 +233,7 @@ const TRANSLATIONS = {
         'modal.booking.people': 'people',
         'modal.booking.depositPerPerson': 'Deposit per person',
         'modal.booking.totalCommitment': 'Total commitment',
-        'modal.booking.notice': 'You won\'t be charged if you attend your reservation.',
+        'modal.booking.notice': 'The deposit will be automatically deducted from your final bill.',
         'modal.booking.warning': 'Deposit is only withheld in case of no-show.',
         'modal.booking.cta': 'Proceed to Payment',
 
@@ -247,7 +247,7 @@ const TRANSLATIONS = {
         'payment.cardHolder': 'Cardholder name',
         'payment.cardHolderPlaceholder': 'As it appears on card',
         'payment.totalToPay': 'Total to pay',
-        'payment.refundableDeposit': 'Refundable deposit',
+        'payment.refundableDeposit': 'Bill-deductible deposit',
         'payment.cta': 'Pay',
         'payment.secure': '100% secure and encrypted payment',
 
@@ -276,7 +276,7 @@ const TRANSLATIONS = {
         'dashboard.stats.thisYear': 'This year',
         'dashboard.stats.attendanceRate': 'Attendance Rate',
         'dashboard.stats.perfect': 'Perfect!',
-        'dashboard.stats.depositsReturned': 'Deposits Returned',
+        'dashboard.stats.depositsReturned': 'Deposits Deducted',
         'dashboard.stats.completedReservations': 'completed reservations',
         'dashboard.stats.favoriteRestaurants': 'Favorite Restaurants',
         'dashboard.stats.inYourList': 'In your list',

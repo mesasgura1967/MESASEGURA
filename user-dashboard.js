@@ -34,7 +34,7 @@ function updateFinancialStats() {
     const refundedEl = document.getElementById('stats-refunded-text');
 
     if (activeEl) activeEl.textContent = '€' + activeDeposit;
-    if (refundedEl) refundedEl.textContent = '€' + refundedDeposit + ' devueltos históricamente';
+    if (refundedEl) refundedEl.textContent = '€' + refundedDeposit + ' descontados de tus facturas';
 }
 
 function showSection(sectionName) {

@@ -293,7 +293,7 @@ window.openBookingModal = function (id) {
                 </div>
                 <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.75rem; border-radius: var(--radius-md); margin-bottom: 0.5rem;">
                     <p style="font-size: 0.875rem; color: #22c55e; margin: 0; font-weight: 600;">
-                        💰 La fianza se devuelve automáticamente después de tu comida
+                        💰 La fianza se descontará automáticamente de tu cuenta final
                     </p>
                 </div>
                 <p style="font-size: 0.75rem; color: var(--text-tertiary); margin: 0; text-align: center;">
@@ -346,7 +346,7 @@ function showPaymentModal(bookingData) {
                 💳
             </div>
             <h2 style="font-family: var(--font-display); margin-bottom: 0.5rem;">Pago de Fianza</h2>
-            <p style="color: var(--text-secondary);">La fianza se devolverá automáticamente después de tu comida</p>
+            <p style="color: var(--text-secondary);">La fianza se descontará automáticamente del total de tu factura</p>
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
@@ -384,14 +384,14 @@ function showPaymentModal(bookingData) {
             </div>
 
             <div style="background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); color: white; padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1rem; text-align: center;">
-                <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.25rem;">Fianza temporal</div>
+                <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.25rem;">Depósito a descontar</div>
                 <div style="font-size: 2rem; font-weight: 700;">€${bookingData.deposit}</div>
-                <div style="font-size: 0.75rem; opacity: 0.9; margin-top: 0.25rem;">✅ Se devuelve después de comer</div>
+                <div style="font-size: 0.75rem; opacity: 0.9; margin-top: 0.25rem;">✅ Se descuenta de tu factura final</div>
             </div>
 
             <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.75rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
                 <p style="font-size: 0.875rem; color: #22c55e; margin: 0; text-align: center;">
-                    💰 <strong>100% reembolsable</strong> - El dinero vuelve a tu cuenta al finalizar
+                    💰 <strong>Pago a cuenta</strong> - El dinero se resta de lo que consumas en el local
                 </p>
             </div>
 
@@ -400,7 +400,7 @@ function showPaymentModal(bookingData) {
             </button>
             
             <p style="font-size: 0.75rem; color: var(--text-tertiary); text-align: center; margin-top: 1rem;">
-                🔒 Pago 100% seguro y encriptado • Devolución automática
+                🔒 Pago 100% seguro y encriptado • Descontable de factura
             </p>
         </form>
     `;

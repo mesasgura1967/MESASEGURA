@@ -102,10 +102,10 @@ function loadReservations() {
             <div class="res-commitment">${displayDeposit}</div>
             <div class="res-actions">
                 ${res.status === 'confirmed' ? `
-                    <button class="action-btn check-in" title="Confirmar y Devolver Fianza">✅</button>
+                    <button class="action-btn check-in" title="Confirmar Asistencia (Descontar de Factura)">✅</button>
                     <button class="action-btn no-show" title="Marcar No-Show (Retener Fianza)">🚫</button>
                 ` : ''}
-                ${res.status === 'completed' ? `<span style="color: var(--success-500);">Fianza Devuelta</span>` : ''}
+                ${res.status === 'completed' ? `<span style="color: var(--success-500);">Descontado de Factura</span>` : ''}
                 ${res.status === 'no-show' ? `<span style="color: var(--danger-500);">Fianza Retenida</span>` : ''}
             </div>
         </div>
@@ -141,7 +141,7 @@ function createNewReservation() {
 
 function confirmRefund(id, row, statusEl, btn) {
     // In a real app, this would call an API (Stripe, etc.)
-    showNotification('Confirmando asistencia y procesando devolución...', 'info');
+    showNotification('Confirmando asistencia para descuento en factura...', 'info');
 
     setTimeout(() => {
         // Update local state
@@ -164,7 +164,7 @@ function confirmRefund(id, row, statusEl, btn) {
         btn.title = 'Deshacer';
         row.style.background = 'rgba(16, 185, 129, 0.05)';
 
-        showNotification('✅ Asistencia confirmada. Fianza devuelta al cliente.', 'success');
+        showNotification('✅ Asistencia confirmada. La fianza debe descontarse de la factura.', 'success');
         showNotification('✅ Asistencia confirmada. Fianza devuelta al cliente.', 'success');
     }, 1500);
 }

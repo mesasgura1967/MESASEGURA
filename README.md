@@ -1,9 +1,9 @@
-# MesaSegura - Plataforma de Reservas con Fianza Reembolsable
+# MesaSegura - Plataforma de Reservas con Fianza Descontable de Factura
 
 ![MesaSegura](https://img.shields.io/badge/MesaSegura-v1.0-orange)
 ![Precio](https://img.shields.io/badge/Suscripción-€60%2Faño-success)
 
-**MesaSegura** es la plataforma definitiva para restaurantes que quieren eliminar los "no-shows" mediante un sistema de **fianza reembolsable**.
+**MesaSegura** es la plataforma definitiva para restaurantes que quieren eliminar los "no-shows" mediante un sistema de **fianza descontable de la factura**.
 
 ## 💰 Modelo de Negocio Simple
 
@@ -59,13 +59,13 @@ Con **una sola reserva salvada al mes**, ya recuperas tu inversión:
 1. **Reserva tu mesa** → Selecciona restaurante, fecha y hora
 2. **Paga una fianza** → Pequeño depósito (€10-€40 por persona)
 3. **Disfruta tu comida** → Asiste al restaurante normalmente
-4. **Recupera tu dinero** → **La fianza se devuelve automáticamente** después de comer
+4. **Disfruta tu comida** → Al terminar, **la fianza se descuenta automáticamente de tu factura** final.
 
 ### ✅ Beneficios para el Cliente
 
-- 💰 **Dinero 100% recuperable** - Solo pagas temporalmente
+- 💰 **Pago a cuenta** - El dinero se resta de lo que consumas en el local
 - 🎯 **Mesa garantizada** - Tu reserva está asegurada
-- ⚡ **Devolución automática** - Sin trámites ni esperas (24-48h)
+- ⚡ **Sin esperas** - El descuento se aplica en el momento de pagar en el restaurante
 - 🔒 **Pago seguro** - Sistema encriptado
 
 ### ⚠️ ¿Cuándo NO se devuelve?
@@ -123,7 +123,7 @@ La fianza solo se retiene si:
 
 - 📧 **Email de confirmación** inmediato
 - 📱 **SMS 24h antes** de la reserva
-- 💰 **Devolución automática** post-comida
+- 💰 **Descuento automático** post-comida
 - 🔄 **Sincronización** en tiempo real
 - 📊 **Reportes mensuales** automáticos
 
@@ -215,7 +215,7 @@ La fianza solo se retiene si:
 - 📱 **3D Secure 2.0** para seguridad
 
 ### Garantías
-- ✅ **Devolución garantizada** por contrato
+- ✅ **Descuento garantizado** por contrato
 - ⚖️ **Términos claros** sin letra pequeña
 - 🆘 **Mediación** en caso de disputa
 - 📞 **Soporte legal** incluido
@@ -228,8 +228,8 @@ Sí, sin trucos. Una tarifa plana anual sin comisiones extra.
 **¿Hay límite de reservas?**
 No. Procesa 10 o 10,000 reservas, mismo precio.
 
-**¿Cuándo se devuelve la fianza al cliente?**
-Automáticamente tras confirmar check-out, dinero en cuenta en 24-48h.
+**¿Cómo se aplica la fianza?**
+Se descuenta directamente del total de tu factura al finalizar la comida en el restaurante.
 
 **¿Qué pasa si un cliente reclama?**
 Sistema de mediación incluido. El cliente siempre puede reclamar con documentación.
@@ -317,7 +317,7 @@ Todas. Nuevas features sin coste adicional.
 
 ---
 
-**💡 MesaSegura = Tu mesa siempre asegurada + Fianzas que se devuelven**
+**💡 MesaSegura = Tu mesa siempre asegurada + Fianzas descontables de tu factura**
 
 *Solo €60/año para tu restaurante. Sin sorpresas. Sin comisiones.*
 
