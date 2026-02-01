@@ -180,6 +180,7 @@ const TRANSLATIONS = {
         'common.today': 'Hoy',
         'common.yesterday': 'Ayer',
         'common.tomorrow': 'Mañana',
+        'common.supportNote': 'Soporte disponible sólo en español',
     },
 
     en: {
@@ -355,6 +356,7 @@ const TRANSLATIONS = {
         'common.today': 'Today',
         'common.yesterday': 'Yesterday',
         'common.tomorrow': 'Tomorrow',
+        'common.supportNote': 'Official support available in Spanish only',
     }
 };
 

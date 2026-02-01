@@ -27,7 +27,7 @@ Por solo **€60 al año** tu restaurante obtiene:
 - ✅ **Check-in digital**
 - 🔔 **Notificaciones automáticas**
 - 📧 **Emails de confirmación**
-- 🆘 **Soporte técnico**
+- 🆘 **Soporte técnico (Sólo en español)**
 - 🔄 **Actualizaciones gratis**
 
 ### Cálculo de ROI
@@ -151,7 +151,7 @@ La fianza solo se retiene si:
 | **Comisión por reserva** | **0%** | 5-10% | 8-12% |
 | **Límite de reservas** | **Ilimitado** | 100-500/mes | 200-1000/mes |
 | **Setup fee** | **€0** | €150 | €200 |
-| **Soporte** | ✅ | ✅ | ✅ Premium |
+| **Soporte** | ✅ (Sólo Español) | ✅ | ✅ Premium |
 | **App móvil** | Roadmap | ✅ | ✅ |
 
 **Ahorro vs competencia: €240-€1,140 al año** 🎯
@@ -218,7 +218,7 @@ La fianza solo se retiene si:
 - ✅ **Descuento garantizado** por contrato
 - ⚖️ **Términos claros** sin letra pequeña
 - 🆘 **Mediación** en caso de disputa
-- 📞 **Soporte legal** incluido
+- 📞 **Soporte legal (Sólo en español)** incluido
 
 ## 🎯 Preguntas Frecuentes
 
@@ -273,10 +273,12 @@ Todas. Nuevas features sin coste adicional.
 - 📧 **Email**: restaurantes@mesasegura.com
 - 💬 **Chat**: www.mesasegura.com/chat
 - 📍 **Oficina**: Madrid, España
+- 🌍 **Soporte**: Sólo disponible en español
+
 
 ### Para Clientes
 - 📧 **Email**: soporte@mesasegura.com
-- 💬 **Chat**: Disponible 24/7
+- 💬 **Chat**: Disponible 24/7 (Sólo en español)
 - 📱 **App**: Próximamente
 
 ### Redes Sociales
