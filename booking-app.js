@@ -297,7 +297,7 @@ window.openBookingModal = function (id) {
                     </p>
                 </div>
                 <p style="font-size: 0.75rem; color: var(--text-tertiary); margin: 0; text-align: center;">
-                    Solo se retiene en caso de no asistencia sin cancelar con 24h de antelación
+                    Solo se retiene en caso de no asistencia sin cancelar con 3h de antelación
                 </p>
             </div>
 
@@ -489,7 +489,7 @@ function showSuccessModal(reservation) {
 
             <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid var(--primary-500); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
                 <p style="font-size: 0.875rem; color: var(--text-primary); margin: 0;">
-                    💡 Recibirás un recordatorio por email 24h antes de tu reserva
+                    💡 Recibirás un recordatorio por email antes de tu reserva
                 </p>
             </div>
 

@@ -22,35 +22,48 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="6" y="14" width="28" height="3" rx="1.5" fill="url(#logo-gradient)" />
-                    <path d="M10 17L9 30M30 17L31 30M16 17V26M24 17V26" stroke="url(#logo-gradient)" stroke-width="2.5"
-                        stroke-linecap="round" />
-                    <defs>
-                        <linearGradient id="logo-gradient" x1="6" y1="14" x2="34" y2="30">
-                            <stop offset="0%" stop-color="#FF6B35" />
-                            <stop offset="100%" stop-color="#ff8c42" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <img src="assets/logo-vibrant.png" alt="MesaSegura Logo" class="logo-img"
+                    style="height: 40px; width: auto; filter: drop-shadow(0 0 10px rgba(255, 127, 0, 0.3));">
                 <span class="logo-text">MesaSegura</span>
             </div>
-            <div class="nav-links">
+
+            <!-- Desktop Menu -->
+            <div class="nav-links desktop-only">
                 <a href="#features" class="nav-link">Características</a>
                 <a href="#how-it-works" class="nav-link">Cómo Funciona</a>
                 <a href="#pricing" class="nav-link">Precios</a>
                 <a href="#contact" class="nav-link">Contacto</a>
             </div>
-            <div class="nav-actions">
-                <!-- Language switcher will be injected here by i18n.js -->
+
+            <div class="nav-actions desktop-only">
                 <button class="btn btn-secondary" onclick="showLogin()" data-i18n="nav.login">Iniciar Sesión</button>
                 <button class="btn btn-primary" onclick="showSignup()" data-i18n="nav.signup">Registrarse</button>
             </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#features" class="nav-link" onclick="toggleMobileMenu()">Características</a>
+                <a href="#how-it-works" class="nav-link" onclick="toggleMobileMenu()">Cómo Funciona</a>
+                <a href="#pricing" class="nav-link" onclick="toggleMobileMenu()">Precios</a>
+                <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contacto</a>
+                <div class="mobile-menu-actions">
+                    <button class="btn btn-secondary btn-block" onclick="showLogin(); toggleMobileMenu()"
+                        data-i18n="nav.login">Iniciar Sesión</button>
+                    <button class="btn btn-primary btn-block" onclick="showSignup(); toggleMobileMenu()"
+                        data-i18n="nav.signup">Registrarse</button>
+                </div>
+                <div class="mobile-lang-switcher" id="mobile-lang-switcher">
+                    <!-- Language flags injected here -->
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -105,34 +118,9 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="app-preview">
-                                <div class="app-header">
-                                    <div class="app-time">19:28</div>
-                                    <div class="app-icons">
-                                        <span>📶</span>
-                                        <span>🔋</span>
-                                    </div>
-                                </div>
-                                <div class="app-content">
-                                    <div class="reservation-card">
-                                        <div class="restaurant-image"></div>
-                                        <div class="reservation-details">
-                                            <h3>La Bella Vita</h3>
-                                            <p>🕐 Hoy, 20:30 · 4 personas</p>
-                                            <div class="commitment-badge">
-                                                <span>💳 Compromiso: €40</span>
-                                            </div>
-                                        </div>
-                                        <button class="confirm-btn">Confirmar Reserva</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="vibrant-mockup-wrapper">
+                    <img src="assets/hero-mockup-vibrant.png" alt="MesaSegura App Mockup" class="hero-mockup-img">
+                    <div class="mockup-glow"></div>
                 </div>
             </div>
         </div>
@@ -394,17 +382,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="6" y="14" width="28" height="3" rx="1.5" fill="url(#footer-logo-gradient)" />
-                            <path d="M10 17L9 30M30 17L31 30M16 17V26M24 17V26" stroke="url(#footer-logo-gradient)"
-                                stroke-width="2.5" stroke-linecap="round" />
-                            <defs>
-                                <linearGradient id="footer-logo-gradient" x1="5" y1="5" x2="35" y2="35">
-                                    <stop offset="0%" stop-color="#FF6B35" />
-                                    <stop offset="100%" stop-color="#ff8c42" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        <img src="assets/logo-vibrant.png" alt="MesaSegura Logo" class="footer-logo-img"
+                            style="height: 32px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 127, 0, 0.2));">
                         <span class="logo-text">MesaSegura</span>
                     </div>
                     <p class="footer-description">
@@ -466,13 +445,28 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2026 MesaSegura. Todos los derechos reservados.</p>
-                <div class="footer-legal">
-                    <a href="#">Términos</a>
-                    <span class="separator">·</span>
-                    <a href="#">Privacidad</a>
-                    <span class="separator">·</span>
-                    <a href="#">Cookies</a>
+                <p class="copyright">
+                    © 2026 MesaSegura. Todos los derechos reservados.
+                    <a href="admin.html" style="opacity: 0.1; cursor: default; margin-left: 5px;"
+                        title="Acceso Creador">⚡</a>
+                </p>
+                <div class="footer-legal"
+                    style="flex-direction: column; align-items: center; gap: 1rem; text-align: center;">
+                    <p style="font-size: 0.75rem; color: var(--text-tertiary); max-width: 800px; line-height: 1.4;">
+                        <strong>Aviso Legal:</strong> MesaSegura es un intermediario digital independiente y no actúa
+                        como custodio de fondos.
+                        Los pagos se procesan directamente a la cuenta del restaurante. En caso de reclamación, la
+                        disputa se resolverá
+                        directamente entre el cliente y el restaurante. Política de cancelación: Mínimo 3 horas antes.
+                        Cortesía por llegada tarde: 20 minutos.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#">Términos</a>
+                        <span class="separator">·</span>
+                        <a href="#">Privacidad</a>
+                        <span class="separator">·</span>
+                        <a href="#">Cookies</a>
+                    </div>
                 </div>
             </div>
         </div>

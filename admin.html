@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Creador - MesaSegura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .admin-sidebar {
+            background: linear-gradient(180deg, #1a1a20 0%, #0a0a0c 100%);
+            border-right: 1px solid var(--primary-500);
+        }
+
+        .creator-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .god-mode-card {
+            background: linear-gradient(135deg, rgba(255, 127, 0, 0.1) 0%, rgba(255, 0, 0, 0.1) 100%);
+            border: 1px solid rgba(255, 127, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .json-viewer {
+            background: #000;
+            color: #0f0;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            font-family: monospace;
+            font-size: 0.8rem;
+            max-height: 300px;
+            overflow: auto;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar admin-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="assets/logo-vibrant.png" alt="Logo" style="height: 30px;">
+                    <span class="logo-text">MesaSegura</span>
+                </div>
+                <div style="margin-top: 0.5rem;">
+                    <span class="creator-badge">Creator Admin</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" onclick="showAdminSection('overview')">
+                    <span class="icon">📊</span>
+                    <span>Vista Global</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showAdminSection('restaurants')">
+                    <span class="icon">🏪</span>
+                    <span>Restaurantes</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showAdminSection('bookings')">
+                    <span class="icon">📅</span>
+                    <span>Todas las Reservas</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="showAdminSection('godmode')">
+                    <span class="icon">⚡</span>
+                    <span>God Mode</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">C</div>
+                    <div class="user-info">
+                        <span class="user-name">Creador Principal</span>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="sidebar-link" style="width: 100%; margin-top: 1rem; color: var(--danger-500);"
+                    onclick="window.location.href='index.html'">
+                    <span class="icon">🚪</span>
+                    <span>Salir</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 class="page-title" id="section-title">Vista Global del Sistema</h1>
+                <div class="top-actions">
+                    <div id="live-indicator"
+                        style="display: flex; align-items: center; gap: 0.5rem; color: #10b981; font-size: 0.875rem; font-weight: 600;">
+                        <span
+                            style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block; animation: pulse 2s infinite;"></span>
+                        SISTEMA LIVE
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <div id="overview-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon icon-orange">💰</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Fianzas en Tránsito</span>
+                            <span class="stat-number" id="global-deposits">€0</span>
+                            <span class="stat-trend">Dinero total comprometido</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-blue">🏪</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Restaurantes Registrados</span>
+                            <span class="stat-number" id="global-restaurants">0</span>
+                            <span class="stat-trend">Locales activos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-purple">📅</div>
+                        <div class="stat-details">
+                            <span class="stat-label">Total Reservas</span>
+                            <span class="stat-number" id="global-bookings">0</span>
+                            <span class="stat-trend">Histórico del sistema</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-green">📈</div>
+                        <div class="stat-details">
+                            <span class="stat-label">No-Shows Evitados</span>
+                            <span class="stat-number" id="global-prevented">0</span>
+                            <span class="stat-trend">Tasa de éxito 98%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Última Actividad del Sistema</h2>
+                        </div>
+                        <div class="reservation-list" id="global-activity-list">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Top Restaurantes</h2>
+                        </div>
+                        <div id="top-restaurants-list">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- God Mode Section -->
+            <div id="godmode-section" style="display: none;">
+                <div class="god-mode-card">
+                    <div>
+                        <h2 style="font-family: var(--font-display); margin-bottom: 0.5rem;">Herramientas de
+                            Desarrollador</h2>
+                        <p style="color: var(--text-secondary);">Control absoluto sobre los datos del localStorage para
+                            demostraciones.</p>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button onclick="seedData()" class="btn btn-primary">🌱 Poblar Datos Demo</button>
+                        <button onclick="nukeData()" class="btn btn-outline"
+                            style="color: var(--danger-500); border-color: var(--danger-500);">🗑️ Borrar Todo</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Explorador de Datos Crudos (localStorage)</h2>
+                    </div>
+                    <div id="raw-data-viewer" class="json-viewer">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurants List Section -->
+            <div id="restaurants-section" style="display: none;">
+                <div class="card">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <thead>
+                            <tr
+                                style="text-align: left; color: var(--text-tertiary); font-size: 0.875rem; border-bottom: 1px solid var(--border-color);">
+                                <th style="padding: 1rem;">RESTAURANTE</th>
+                                <th style="padding: 1rem;">ZONA</th>
+                                <th style="padding: 1rem;">FIANZA</th>
+                                <th style="padding: 1rem;">ESTADO</th>
+                                <th style="padding: 1rem;">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody id="restaurants-table-body">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Bookings List Section -->
+            <div id="bookings-section" style="display: none;">
+                <div class="card">
+                    <div class="reservation-list" id="full-bookings-list">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <script src="script.js"></script>
+    <script src="booking-app.js"></script> <!-- To get restaurant data -->
+    <script src="admin.js"></script>
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+
+</html>

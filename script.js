@@ -20,7 +20,10 @@ document.addEventListener('keydown', (e) => {
         keySequence.shift();
     }
     if (keySequence.join('') === SECRET_CODE) {
-        openCreatorPanel();
+        showNotification('⚡ Identidad de Creador Confirmada. Accediendo...', 'success');
+        setTimeout(() => {
+            window.location.href = 'admin.html';
+        }, 1500);
     }
 });
 
@@ -103,11 +106,11 @@ window.addEventListener('scroll', () => {
 });
 
 function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    const navActions = document.querySelector('.nav-actions');
+    const navbar = document.getElementById('navbar');
+    const isActive = navbar.classList.toggle('menu-active');
 
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    navActions.style.display = navActions.style.display === 'flex' ? 'none' : 'flex';
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = isActive ? 'hidden' : '';
 }
 
 function scrollToSection(sectionId) {

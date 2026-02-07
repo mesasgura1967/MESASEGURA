@@ -72,8 +72,9 @@ Con **una sola reserva salvada al mes**, ya recuperas tu inversión:
 
 La fianza solo se retiene si:
 - ❌ No asistes a tu reserva
-- ❌ No cancelas con al menos 24 horas de antelación
-- ❌ Llegas más de 30 minutos tarde sin avisar
+- ❌ No cancelas con al menos **3 horas** de antelación
+- ❌ Llegas más de **20 minutos** tarde sin avisar (cortesía máxima)
+- ⚖️ **Aviso Legal**: MesaSegura actúa únicamente como **intermediario digital**. No somos custodios de dinero; el pago se procesa directamente a la cuenta del restaurante. Cualquier reclamación debe gestionarse directamente entre el restaurante y el cliente.
 
 ## 🎯 El Problema que Resolvemos
 
@@ -214,10 +215,13 @@ La fianza solo se retiene si:
 - 🔐 **Tokenización** de tarjetas
 - 📱 **3D Secure 2.0** para seguridad
 
-### Garantías
+### Garantías y Estatus Legal
+- ⚖️ **Intermediario Digital**: MesaSegura es un conector tecnológico, no un custodio de fondos.
+- 💰 **Pagos Directos**: Los fondos se gestionan a través de pasarelas de pago (Stripe/Redsys) directamente a las cuentas de los restaurantes.
+- ❌ **Responsabilidad**: No nos hacemos responsables de disputas de servicio; estas deben resolverse entre cliente y restaurante.
 - ✅ **Descuento garantizado** por contrato
 - ⚖️ **Términos claros** sin letra pequeña
-- 🆘 **Mediación** en caso de disputa
+- 🆘 **Mediación técnica** incluida
 - 📞 **Soporte legal (Sólo en español)** incluido
 
 ## 🎯 Preguntas Frecuentes

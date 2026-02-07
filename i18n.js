@@ -3,7 +3,9 @@
 
 const LANGUAGES = {
     ES: 'es',
-    EN: 'en'
+    EN: 'en',
+    DE: 'de',
+    FR: 'fr'
 };
 
 const TRANSLATIONS = {
@@ -59,7 +61,7 @@ const TRANSLATIONS = {
         'modal.booking.depositPerPerson': 'Depósito por persona',
         'modal.booking.totalCommitment': 'Total a comprometer',
         'modal.booking.notice': 'La fianza se descontará automáticamente del total de tu factura al comer.',
-        'modal.booking.warning': 'Solo se retiene en caso de no asistencia sin previo aviso.',
+        'modal.booking.warning': 'Solo se retiene si no asistes o no cancelas con al menos 3 horas de antelación.',
         'modal.booking.cta': 'Proceder al Pago',
 
         // Payment Modal
@@ -160,7 +162,7 @@ const TRANSLATIONS = {
 
         // Notifications
         'notification.reservationConfirmed': '¡Reserva confirmada en {restaurant}! 🎉',
-        'notification.reservationCancelled': 'Reserva cancelada correctamente. Tu depósito será devuelto en 24-48 horas.',
+        'notification.reservationCancelled': 'Reserva cancelada correctamente. Tu depósito será devuelto íntegramente.',
         'notification.processing': 'Procesando pago...',
         'notification.welcome': '¡Bienvenido, {name}! 👋',
         'notification.accountCreated': '¡Cuenta creada con éxito! Bienvenido, {name}! 🎉',
@@ -235,7 +237,7 @@ const TRANSLATIONS = {
         'modal.booking.depositPerPerson': 'Deposit per person',
         'modal.booking.totalCommitment': 'Total commitment',
         'modal.booking.notice': 'The deposit will be automatically deducted from your final bill.',
-        'modal.booking.warning': 'Deposit is only withheld in case of no-show.',
+        'modal.booking.warning': 'Only withheld if you don\'t show up or don\'t cancel at least 3 hours in advance.',
         'modal.booking.cta': 'Proceed to Payment',
 
         // Payment Modal
@@ -336,7 +338,7 @@ const TRANSLATIONS = {
 
         // Notifications
         'notification.reservationConfirmed': 'Booking confirmed at {restaurant}! 🎉',
-        'notification.reservationCancelled': 'Reservation cancelled successfully. Your deposit will be refunded in 24-48 hours.',
+        'notification.reservationCancelled': 'Reservation cancelled successfully. Your deposit will be fully refunded.',
         'notification.processing': 'Processing payment...',
         'notification.welcome': 'Welcome, {name}! 👋',
         'notification.accountCreated': 'Account created successfully! Welcome, {name}! 🎉',
@@ -357,6 +359,130 @@ const TRANSLATIONS = {
         'common.yesterday': 'Yesterday',
         'common.tomorrow': 'Tomorrow',
         'common.supportNote': 'Official support available in Spanish only',
+    },
+
+    de: {
+        // Brand
+        'brand.name': 'MesaSegura',
+        'brand.tagline': 'Ihr Tisch, immer gesichert',
+        'brand.subtitle': 'Restaurant-Buchungsplattform mit von der Rechnung abziehbarer Anzahlung',
+
+        // Navigation
+        'nav.features': 'Funktionen',
+        'nav.howItWorks': 'Wie es funktioniert',
+        'nav.pricing': 'Preise',
+        'nav.searchRestaurants': 'Restaurants suchen',
+        'nav.login': 'Anmelden',
+        'nav.signup': 'Registrieren',
+        'nav.myAccount': 'Mein Konto',
+        'nav.bookNow': 'Jetzt buchen',
+
+        // Hero Section
+        'hero.badge': 'Revolutionierung der Restaurantreservierungen',
+        'hero.title.1': 'Ihr Tisch,',
+        'hero.title.2': 'Immer',
+        'hero.title.3': 'Gesichert',
+        'hero.subtitle': 'Buchen Sie mit Vertrauen. Ein finanzielles Verpflichtungssystem, das sowohl Restaurants als auch Gästen zugute kommt.',
+        'hero.cta.primary': 'Restaurants suchen',
+        'hero.cta.secondary': 'Wie es funktioniert',
+        'hero.stats.reduction': 'No-Show Reduzierung',
+        'hero.stats.satisfaction': 'Kundenzufriedenheit',
+        'hero.stats.restaurants': 'Aktive Restaurants',
+
+        // Booking Page
+        'booking.title': 'Restaurants in der Nähe',
+        'booking.search.placeholder': 'Suche nach Restaurants, Küchen oder Gegenden...',
+        'booking.filter.popular': '🔥 Beliebt',
+        'booking.filter.japanese': '🍣 Japanisch',
+        'booking.filter.italian': '🍝 Italienisch',
+        'booking.filter.steakhouse': '🥩 Steakhouse',
+        'booking.filter.vegan': '🌱 Vegan',
+        'booking.filter.winery': '🍷 Weinbar',
+        'booking.commitment': 'Verpflichtung',
+        'booking.perPerson': 'Person',
+        'booking.noResults.title': 'Keine Restaurants gefunden',
+        'booking.noResults.subtitle': 'Versuchen Sie andere Filter oder Suchbegriffe',
+
+        // Booking Modal
+        'modal.booking.title': 'Buchung abschließen',
+        'modal.booking.date': 'Datum',
+        'modal.booking.time': 'Uhrzeit',
+        'modal.booking.guests': 'Gäste',
+        'modal.booking.person': 'Person',
+        'modal.booking.people': 'Personen',
+        'modal.booking.depositPerPerson': 'Anzahlung pro Person',
+        'modal.booking.totalCommitment': 'Gesamtverpflichtung',
+        'modal.booking.notice': 'Die Anzahlung wird automatisch von Ihrer Endabrechnung abgezogen.',
+        'modal.booking.warning': 'Wird nur einbehalten, wenn Sie nicht erscheinen oder nicht mindestens 3 Stunden im Voraus absagen.',
+        'modal.booking.cta': 'Zur Zahlung',
+
+        // Notifications
+        'notification.reservationConfirmed': 'Buchung bestätigt im {restaurant}! 🎉',
+        'notification.reservationCancelled': 'Reservierung erfolgreich storniert. Ihre Anzahlung wird vollständig zurückerstattet.',
+        'notification.processing': 'Zahlung wird verarbeitet...',
+        'common.supportNote': 'Offizieller Support nur auf Spanisch verfügbar',
+    },
+
+    fr: {
+        // Brand
+        'brand.name': 'MesaSegura',
+        'brand.tagline': 'Votre table, toujours sécurisée',
+        'brand.subtitle': 'Plateforme de réservation de restaurants avec caution déductible de la facture',
+
+        // Navigation
+        'nav.features': 'Fonctionnalités',
+        'nav.howItWorks': 'Comment ça marche',
+        'nav.pricing': 'Tarifs',
+        'nav.searchRestaurants': 'Chercher des restaurants',
+        'nav.login': 'Connexion',
+        'nav.signup': 'S\'inscrire',
+        'nav.myAccount': 'Mon compte',
+        'nav.bookNow': 'Réserver maintenant',
+
+        // Hero Section
+        'hero.badge': 'Révolutionner les réservations de restaurants',
+        'hero.title.1': 'Votre Table,',
+        'hero.title.2': 'Toujours',
+        'hero.title.3': 'Sécurisée',
+        'hero.subtitle': 'Réservez en toute confiance. Un système d\'engagement financier au bénéfice des restaurants et des convives.',
+        'hero.cta.primary': 'Chercher des restaurants',
+        'hero.cta.secondary': 'Comment ça marche',
+        'hero.stats.reduction': 'Réduction des No-Shows',
+        'hero.stats.satisfaction': 'Satisfaction client',
+        'hero.stats.restaurants': 'Restaurants actifs',
+
+        // Booking Page
+        'booking.title': 'Restaurants à proximité',
+        'booking.search.placeholder': 'Rechercher des restaurants, cuisines ou zones...',
+        'booking.filter.popular': '🔥 Populaire',
+        'booking.filter.japanese': '🍣 Japonais',
+        'booking.filter.italian': '🍝 Italien',
+        'booking.filter.steakhouse': '🥩 Grill',
+        'booking.filter.vegan': '🌱 Végan',
+        'booking.filter.winery': '🍷 Bar à vins',
+        'booking.commitment': 'Engagement',
+        'booking.perPerson': 'personne',
+        'booking.noResults.title': 'Aucun restaurant trouvé',
+        'booking.noResults.subtitle': 'Essayez d\'autres filtres ou termes de recherche',
+
+        // Booking Modal
+        'modal.booking.title': 'Compléter la réservation',
+        'modal.booking.date': 'Date',
+        'modal.booking.time': 'Heure',
+        'modal.booking.guests': 'Personnes',
+        'modal.booking.person': 'personne',
+        'modal.booking.people': 'personnes',
+        'modal.booking.depositPerPerson': 'Caution par personne',
+        'modal.booking.totalCommitment': 'Engagement total',
+        'modal.booking.notice': 'La caution sera automatiquement déduite de votre facture finale.',
+        'modal.booking.warning': 'Retenue uniquement si vous ne vous présentez pas ou si vous n\'annulez pas au moins 3 heures à l\'avance.',
+        'modal.booking.cta': 'Procéder au paiement',
+
+        // Notifications
+        'notification.reservationConfirmed': 'Réservation confirmée chez {restaurant} ! 🎉',
+        'notification.reservationCancelled': 'Réservation annulée avec succès. Votre caution sera intégralement remboursée.',
+        'notification.processing': 'Traitement du paiement...',
+        'common.supportNote': 'Support officiel disponible en espagnol uniquement',
     }
 };
 
@@ -365,8 +491,8 @@ function detectLanguage() {
     const browserLang = navigator.language || navigator.userLanguage;
     const shortLang = browserLang.split('-')[0].toLowerCase();
 
-    // If browser is in Spanish, use ES. Otherwise default to EN (for foreign users).
-    if (shortLang === 'es') return LANGUAGES.ES;
+    // If browser matches supported languages, use it. Otherwise default to EN.
+    if (Object.values(LANGUAGES).includes(shortLang)) return shortLang;
     return LANGUAGES.EN;
 }
 
@@ -437,12 +563,22 @@ function createLanguageSwitcher() {
         <button class="lang-btn ${currentLanguage === LANGUAGES.ES ? 'active' : ''}" 
                 onclick="setLanguage('${LANGUAGES.ES}')" 
                 title="Español">
-            🇪🇸 ES
+            🇪🇸
         </button>
         <button class="lang-btn ${currentLanguage === LANGUAGES.EN ? 'active' : ''}" 
                 onclick="setLanguage('${LANGUAGES.EN}')" 
                 title="English">
-            🇬🇧 EN
+            🇬🇧
+        </button>
+        <button class="lang-btn ${currentLanguage === LANGUAGES.DE ? 'active' : ''}" 
+                onclick="setLanguage('${LANGUAGES.DE}')" 
+                title="Deutsch">
+            🇩🇪
+        </button>
+        <button class="lang-btn ${currentLanguage === LANGUAGES.FR ? 'active' : ''}" 
+                onclick="setLanguage('${LANGUAGES.FR}')" 
+                title="Français">
+            🇫🇷
         </button>
     `;
 
@@ -499,16 +635,23 @@ function initI18n() {
     addLanguageSwitcherStyles();
     updatePageTranslations();
 
-    // Add language switcher to nav if it exists
-    const navActions = document.querySelector('.nav-actions');
-    if (navActions && !document.querySelector('.language-switcher')) {
+    // Add language switcher to desktop nav
+    const navActions = document.querySelector('.nav-actions.desktop-only');
+    if (navActions && !navActions.querySelector('.language-switcher')) {
         const switcher = createLanguageSwitcher();
         navActions.insertBefore(switcher, navActions.firstChild);
     }
 
+    // Add language switcher to mobile menu
+    const mobileLangSwitcher = document.getElementById('mobile-lang-switcher');
+    if (mobileLangSwitcher && !mobileLangSwitcher.querySelector('.language-switcher')) {
+        const switcher = createLanguageSwitcher();
+        mobileLangSwitcher.appendChild(switcher);
+    }
+
     // Add to dashboard top bar if exists
     const topActions = document.querySelector('.top-actions');
-    if (topActions && !document.querySelector('.language-switcher')) {
+    if (topActions && !topActions.querySelector('.language-switcher')) {
         const switcher = createLanguageSwitcher();
         topActions.insertBefore(switcher, topActions.firstChild);
     }

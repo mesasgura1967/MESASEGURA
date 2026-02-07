@@ -287,7 +287,7 @@ function cancelReservation(id) {
         const filteredReservations = reservations.filter(r => r.id !== id);
         localStorage.setItem('mesasegura_reservations', JSON.stringify(filteredReservations));
 
-        showNotification('Reserva cancelada correctamente. Tu depósito será devuelto en 24-48 horas.', 'success');
+        showNotification('Reserva cancelada correctamente. Tu depósito será devuelto íntegramente.', 'success');
         loadUpcomingReservations();
         updateReservationCount();
     }
